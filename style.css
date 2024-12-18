@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(101, 0, 0, 0.8), rgba(101, 0, 0, 0.8)),
+    url(./DALL·E\ 2024-12-12\ 16.40.03\ -\ A\ visually\ striking\ background\ image\ showing\ a\ dilapidated\ and\ abandoned\ government\ building\ surrounded\ by\ overgrown\ vegetation\ and\ cracked\ pavement\,\ .webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", serif;
+  color: #3e3e3e;
+}
+.container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: #fff;
+  line-height: 43px;
+}
+.main h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.main p {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.slider-box {
+  width: 60%;
+  height: 60vh;
+  margin: auto;
+  /* background-color: yellow; */
+}
+.inner-layer {
+  width: 98%;
+  height: 100%;
+  background-color: #ffffffd8;
+  float: right;
+  position: relative;
+}
+.outer-layer {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffffd8;
+  position: absolute;
+  left: -3%;
+  top: 7%;
+}
+.slider-content {
+  width: 90%;
+  height: 30vh;
+  margin: auto;
+  margin-left: 7.5%;
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+.slider-photo img {
+  width: 200px;
+  height: 250px;
+}
+.slider-txt {
+  padding: 0% 1%;
+}
+.slider-txt h2 {
+  font-size: 30px;
+  text-align: center;
+}
+.slider-txt h2 span {
+  display: block;
+  font-size: 22px;
+}
+.slider-txt p {
+  font-size: 16px;
+  line-height: 23px;
+  margin-top: 1.3rem;
+  text-align: justify;
+}
+.slider-txt p span {
+  font-weight: 500;
+}
+
+.prev {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: #fff;
+  color: #fff;
+  position: absolute;
+  left: -30%;
+  top: 28.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prev img {
+  width: 30px;
+}
+
+.next {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: #fff;
+  color: #fff;
+  position: absolute;
+  right: -30%;
+  top: 28.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.next img {
+  width: 30px;
+}
+
+.dots {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: 1.3%;
+  left: 40%;
+}
+.dots .dot {
+  width: 12px;
+  height: 12px;
+  /* background-color: #3E3E3E; */
+  border: 2px solid #3e3e3e;
+  border-radius: 50%;
+}
+.active-dot {
+  background-color: #3e3e3e;
+}
+.disabled-btn {
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+    height: auto;
+    padding: 1.2rem 0rem;
+    margin: 0%;
+  }
+  .main h1 {
+    font-size: 30px;
+  }
+  .container {
+    width: 99%;
+  }
+  .inner-layer {
+    width: 100%;
+    height: 100vh;
+    position: static;
+    margin: 0%;
+    padding: 0%;
+    background-color: #ffffffd8;
+  }
+  .outer-layer {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    position: static;
+    padding: 3% 0%;
+    padding-bottom: 10%;
+  }
+  .slider-box {
+    width: 100%;
+    height: 100%;
+  }
+  .slider-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    margin: 0%;
+  }
+  .slider-photo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider-photo img {
+    width: 85%;
+    height: 45vh;
+  }
+  .slider-txt {
+    padding: 0% 5%;
+  }
+  .prev {
+    width: 60px;
+    height: 60px;
+    left: 2.5%;
+    top: 126%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  .next {
+    width: 60px;
+    height: 60px;
+    right: 2.5%;
+    top: 126%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  .prev img,
+  .next img {
+    width: 20px;
+  }
+  .dots {
+    position: absolute;
+    bottom: -32%;
+    left: 36%;
+  }
+  .dots .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
